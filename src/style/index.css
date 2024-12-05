@@ -4,6 +4,6 @@
 
 @layer components {
     .links {
-        @apply text-pink-400 hover:text-pink-500;
+        @apply text-perso-blue-300 hover:text-perso-blue-700;
     }
 }
