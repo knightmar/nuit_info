@@ -108,15 +108,14 @@
 
     let btn = document.getElementById("button1");
 
-    // Ajoute un écouteur d'événements au bouton
     btn.addEventListener("click", function () {
         alert('Tout vient à point à qui sait attendre ;)');
 
         let img = document.getElementById('image1');
-        img.style.display = 'block'; // Affiche l'image
-        img.src = 'imgs/advent/cadeau2.png'; // Modifie la source de l'image
-
-        btn.style.display = 'none';
+        img.style.width = '150px';
+        img.style.height = '185px';
+        img.style.display = 'block';
+        img.src = 'imgs/advent/greycadeau.png';
 
     });
 
