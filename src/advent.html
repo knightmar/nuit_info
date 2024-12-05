@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="icon" type="image/png" href= "imgs/advent/icone.png">
+    <title>Calendrier</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style/output.css" rel="stylesheet">
 </head>
@@ -17,14 +18,14 @@
 <div class="grid grid-rows-6  grid-cols-6 gap-2 ml-20">
     <div>
         <button   type="submit" id = "button1" >
-            <img src="./imgs/cadeau1.png" alt="kado" height="150" width="150"/>
+            <img src="imgs/advent/cadeau1.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 1</h3>
         </button>
     </div>
 
     <div>
         <button type="submit" id = "button2">
-            <img src="./imgs/cadeau2.png" alt="kado" height="150" width="150"/>
+            <img src="imgs/advent/cadeau2.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 2</h3>
 
         </button>
@@ -32,7 +33,7 @@
 
     <div>
         <button type="submit" id = "button3">
-            <img src="./imgs/cadeau3.png" alt="kado" height="150" width="150"/>
+            <img src="imgs/advent/cadeau3.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 3</h3>
 
         </button>
@@ -40,7 +41,7 @@
 
     <div>
         <button type="submit" id = "button4">
-            <img src="./imgs/cadeau4.png" alt="kado" height="150" width="150"/>
+            <img src="imgs/advent/cadeau4.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 4</h3>
 
         </button>
@@ -48,60 +49,75 @@
 
     <div>
         <button type="submit" id = "button5">
-            <img src="./imgs/cadeau2.png" alt="kado" height="150" width="150"/>
+            <img src="imgs/advent/cadeau2.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 5</h3>
         </button>
     </div>
 
     <div>
         <button type="submit" id = "button6">
-            <img src="./imgs/cadeau3.png" alt="kado" height="150" width="150"/>
+            <img src="imgs/advent/cadeau3.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 6</h3>
         </button>
     </div>
 
     <div>
         <button type="submit" id = "button7">
-            <img src="./imgs/cadeau4.png" alt="kado" height="150" width="150"/>
+            <img src="imgs/advent/cadeau4.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 7</h3>
         </button>
     </div>
     <div>
         <button type="submit" id = "button8">
-            <img src="./imgs/cadeau1.png" alt="kado" height="150" width="150"/>
+            <img src="imgs/advent/cadeau1.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 8</h3>
         </button>
     </div>
 
     <div>
         <button type="submit" id = "button9">
-            <img src="./imgs/cadeau3.png" alt="kado" height="150" width="150"/>
+            <img src="imgs/advent/cadeau3.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 9</h3>
         </button>
     </div>
 
     <div>
         <button type="submit" id = "button10">
-            <img src="./imgs/cadeau4.png" alt="kado" height="150" width="150"/>
+            <img src="imgs/advent/cadeau4.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 10</h3>
         </button>
     </div>
 
     <div>
         <button type="submit" id = "button11">
-            <img src="./imgs/cadeau1.png" alt="kado" height="150" width="150"/>
+            <img src="imgs/advent/cadeau1.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 11</h3>
         </button>
     </div>
 
     <div>
         <button type="submit" id = "button12">
-            <img src="./imgs/cadeau2.png" alt="kado" height="150" width="150"/>
+            <img src="imgs/advent/cadeau2.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 12</h3>
         </button>
     </div>
 
 </div>
+
+<script>
+
+    let btn = document.getElementById("button1");
+
+    btn.addEventListener("click", Button1);
+
+    function Button1(){
+    alert('tout vient à point à qui sait attendre ;)');
+        button.disabled = false
+    }
+
+</script>
+
+
 
 <script>
     const activationDates = {
