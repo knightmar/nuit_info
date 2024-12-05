@@ -18,7 +18,7 @@
 <div class="grid grid-rows-6  grid-cols-6 gap-2 ml-20">
     <div>
         <button   type="submit" id = "button1" >
-            <img src="imgs/advent/cadeau1.png" alt="kado" height="150" width="150"/>
+            <img id = "image1" src="imgs/advent/cadeau1.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 1</h3>
         </button>
     </div>
@@ -108,12 +108,16 @@
 
     let btn = document.getElementById("button1");
 
-    btn.addEventListener("click", Button1);
+    btn.addEventListener("click", function () {
+        alert('Tout vient à point à qui sait attendre ;)');
 
-    function Button1(){
-    alert('tout vient à point à qui sait attendre ;)');
-        button.disabled = false
-    }
+        let img = document.getElementById('image1');
+        img.style.width = '150px';
+        img.style.height = '185px';
+        img.style.display = 'block';
+        img.src = 'imgs/advent/greycadeau.png';
+
+    });
 
 </script>
 
