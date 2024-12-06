@@ -17,7 +17,7 @@
 
 <div class="grid grid-rows-6  grid-cols-6 gap-2 ml-20">
     <div>
-        <button   type="submit" id = "button1" >
+        <button   type="submit" id = "button1">
             <img id = "image1" src="imgs/advent/cadeau1.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 1</h3>
         </button>
@@ -25,7 +25,7 @@
 
     <div>
         <button type="submit" id = "button2">
-            <img src="imgs/advent/cadeau2.png" alt="kado" height="150" width="150"/>
+            <img id = "image2" src="imgs/advent/cadeau2.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 2</h3>
 
         </button>
@@ -33,7 +33,7 @@
 
     <div>
         <button type="submit" id = "button3">
-            <img src="imgs/advent/cadeau3.png" alt="kado" height="150" width="150"/>
+            <img id = "image3" src="imgs/advent/cadeau3.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 3</h3>
 
         </button>
@@ -41,7 +41,7 @@
 
     <div>
         <button type="submit" id = "button4">
-            <img src="imgs/advent/cadeau4.png" alt="kado" height="150" width="150"/>
+            <img id = "image4" src="imgs/advent/cadeau4.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 4</h3>
 
         </button>
@@ -49,66 +49,64 @@
 
     <div>
         <button type="submit" id = "button5">
-            <img src="imgs/advent/cadeau2.png" alt="kado" height="150" width="150"/>
+            <img id = "image5" src="imgs/advent/cadeau2.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 5</h3>
         </button>
     </div>
 
     <div>
         <button type="submit" id = "button6">
-            <img src="imgs/advent/cadeau3.png" alt="kado" height="150" width="150"/>
+            <img id = "image6" src="imgs/advent/cadeau3.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 6</h3>
         </button>
     </div>
 
     <div>
         <button type="submit" id = "button7">
-            <img src="imgs/advent/cadeau4.png" alt="kado" height="150" width="150"/>
+            <img id = "image7" src="imgs/advent/cadeau4.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 7</h3>
         </button>
     </div>
     <div>
         <button type="submit" id = "button8">
-            <img src="imgs/advent/cadeau1.png" alt="kado" height="150" width="150"/>
+            <img id = "image8" src="imgs/advent/cadeau1.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 8</h3>
         </button>
     </div>
 
     <div>
         <button type="submit" id = "button9">
-            <img src="imgs/advent/cadeau3.png" alt="kado" height="150" width="150"/>
+            <img id = "image9" src="imgs/advent/cadeau3.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 9</h3>
         </button>
     </div>
 
     <div>
         <button type="submit" id = "button10">
-            <img src="imgs/advent/cadeau4.png" alt="kado" height="150" width="150"/>
+            <img id = "image10" src="imgs/advent/cadeau4.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 10</h3>
         </button>
     </div>
 
     <div>
         <button type="submit" id = "button11">
-            <img src="imgs/advent/cadeau1.png" alt="kado" height="150" width="150"/>
+            <img id = "image11" src="imgs/advent/cadeau1.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 11</h3>
         </button>
     </div>
 
     <div>
         <button type="submit" id = "button12">
-            <img src="imgs/advent/cadeau2.png" alt="kado" height="150" width="150"/>
+            <img id = "image12" src="imgs/advent/cadeau2.png" alt="kado" height="150" width="150"/>
             <h3 class="text-white text-2xl">Jour 12</h3>
         </button>
     </div>
 
 </div>
-
 <script>
+    let btn1 = document.getElementById("button1");
 
-    let btn = document.getElementById("button1");
-
-    btn.addEventListener("click", function () {
+    btn1.addEventListener("click", function () {
         alert('Tout vient à point à qui sait attendre ;)');
 
         let img = document.getElementById('image1');
@@ -116,11 +114,176 @@
         img.style.height = '185px';
         img.style.display = 'block';
         img.src = 'imgs/advent/greycadeau.png';
-
     });
-
 </script>
 
+<script>
+    let btn2 = document.getElementById("button2");
+
+    btn2.addEventListener("click", function () {
+        alert('Tout vient à point à qui sait attendre ;)');
+
+        let img = document.getElementById('image2');
+        img.style.width = '150px';
+        img.style.height = '185px';
+        img.style.display = 'block';
+        img.src = 'imgs/advent/greycadeau.png';
+    });
+</script>
+
+<script>
+    let btn3 = document.getElementById("button3");
+
+    btn3.addEventListener("click", function () {
+        alert('Tout vient à point à qui sait attendre ;)');
+
+        let img = document.getElementById('image3');
+        img.style.width = '150px';
+        img.style.height = '185px';
+        img.style.display = 'block';
+        img.src = 'imgs/advent/greycadeau.png';
+    });
+</script>
+
+<script>
+    let btn4 = document.getElementById("button4");
+
+    btn4.addEventListener("click", function () {
+        alert('Tout vient à point à qui sait attendre ;)');
+
+        let img = document.getElementById('image4');
+        img.style.width = '150px';
+        img.style.height = '185px';
+        img.style.display = 'block';
+        img.src = 'imgs/advent/greycadeau.png';
+    });
+</script>
+
+<script>
+    let btn5 = document.getElementById("button5");
+
+    btn5.addEventListener("click", function () {
+        alert('Tout vient à point à qui sait attendre ;)');
+
+        let img = document.getElementById('image5');
+        img.style.width = '150px';
+        img.style.height = '185px';
+        img.style.display = 'block';
+        img.src = 'imgs/advent/greycadeau.png';
+    });
+</script>
+
+<script>
+    let btn6 = document.getElementById("button6");
+
+    btn6.addEventListener("click", function () {
+        alert('Tout vient à point à qui sait attendre ;)');
+
+        let img = document.getElementById('image6');
+        img.style.width = '150px';
+        img.style.height = '185px';
+        img.style.display = 'block';
+        img.src = 'imgs/advent/greycadeau.png';
+    });
+</script>
+
+<script>
+    let btn7 = document.getElementById("button7");
+
+    btn7.addEventListener("click", function () {
+        alert('Tout vient à point à qui sait attendre ;)');
+
+        let img = document.getElementById('image7');
+        img.style.width = '150px';
+        img.style.height = '185px';
+        img.style.display = 'block';
+        img.src = 'imgs/advent/greycadeau.png';
+    });
+</script>
+
+<script>
+    let btn8 = document.getElementById("button8");
+
+    btn8.addEventListener("click", function () {
+        alert('Tout vient à point à qui sait attendre ;)');
+
+        let img = document.getElementById('image8');
+        img.style.width = '150px';
+        img.style.height = '185px';
+        img.style.display = 'block';
+        img.src = 'imgs/advent/greycadeau.png';
+    });
+</script>
+
+<script>
+    let btn9 = document.getElementById("button9");
+
+    btn9.addEventListener("click", function () {
+        alert('Tout vient à point à qui sait attendre ;)');
+
+        let img = document.getElementById('image9');
+        img.style.width = '150px';
+        img.style.height = '185px';
+        img.style.display = 'block';
+        img.src = 'imgs/advent/greycadeau.png';
+    });
+</script>
+
+<script>
+    let btn9 = document.getElementById("button9");
+
+    btn9.addEventListener("click", function () {
+        alert('Tout vient à point à qui sait attendre ;)');
+
+        let img = document.getElementById('image9');
+        img.style.width = '150px';
+        img.style.height = '185px';
+        img.style.display = 'block';
+        img.src = 'imgs/advent/greycadeau.png';
+    });
+</script>
+
+<script>
+    let btn10 = document.getElementById("button10");
+
+    btn10.addEventListener("click", function () {
+        alert('Tout vient à point à qui sait attendre ;)');
+
+        let img = document.getElementById('image10');
+        img.style.width = '150px';
+        img.style.height = '185px';
+        img.style.display = 'block';
+        img.src = 'imgs/advent/greycadeau.png';
+    });
+</script>
+
+<script>
+    let btn11 = document.getElementById("button11");
+
+    btn11.addEventListener("click", function () {
+        alert('Tout vient à point à qui sait attendre ;)');
+
+        let img = document.getElementById('image11');
+        img.style.width = '150px';
+        img.style.height = '185px';
+        img.style.display = 'block';
+        img.src = 'imgs/advent/greycadeau.png';
+    });
+</script>
+
+<script>
+    let btn12 = document.getElementById("button12");
+
+    btn12.addEventListener("click", function () {
+        alert('Tout vient à point à qui sait attendre ;)');
+
+        let img = document.getElementById('image12');
+        img.style.width = '150px';
+        img.style.height = '185px';
+        img.style.display = 'block';
+        img.src = 'imgs/advent/greycadeau.png';
+    });
+</script>
 
 
 <script>
