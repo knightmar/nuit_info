@@ -4,6 +4,10 @@
 
 @layer components {
     .links {
-        @apply text-perso-blue-300 hover:text-perso-blue-700;
+        @apply text-perso-blue-300 hover:text-perso-blue-100 underline;
+    }
+
+    .names {
+        @apply text-white;
     }
 }

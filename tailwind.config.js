@@ -13,6 +13,7 @@ module.exports = {
         'perso-blue-500': '#3F8CAF',
         'perso-blue-700': '#285D81',
         'perso-blue-900': '#1C5077',
+        'perso-blue-950': '#183F5C',
       },
     },
   },
