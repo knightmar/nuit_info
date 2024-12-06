@@ -4,10 +4,150 @@
     <meta charset="UTF-8">
     <link href="./style/output.css" rel="stylesheet">
     <title>Index</title>
+    <style>
+        .vertical {
+            margin-bottom: auto;
+            margin-top: auto;
+            border-left: 5px solid black;
+            height: 400px;
+        }
+
+         .hiddenInfo {
+             display: none;
+         }
+    </style>
 </head>
-<body>
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-</h1>
+<body class="flex justify-center items-center min-h-screen bg-gray-100">
+<div class="hidden can-click" id="can-click">
+</div>
+<div class="grid grid-cols-2 gap-4">
+
+
+    <div class="relative">
+        <!-- Image principale -->
+        <img src="../src/imgs/main/human.jpg" alt="Image principale" class="w-full h-auto">
+
+        <!-- Node 1 -->
+        <div
+                id="node1"
+                style="top: 50%; left: 40%;"
+                class="absolute w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white cursor-pointer hover:bg-blue-700"
+                onclick="showTooltip('Node 1: Information spécf3wnfgweirbfio3wubfgodwsnbvfuoi3hgnvoihtinfougiehtgifique ici', 1)"
+        >
+        <div  style="top: 50%; left: 40%;"
+              class="bsolute w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-white cursor-pointer">
+
+        </div>
+        </div>
+
+        <!-- Node 2 -->
+        <div
+                id="node2"
+                style="top: 50%; left: 60%;"
+                class="absolute w-8 h-8 bg-blue-500 hover:bg-blue-700 rounded-full flex items-center justify-center text-white cursor-pointer"
+                onclick="showTooltip('Node 2: Une autre inghvfgoifoiwhgoiewhgoewrugbdfsvnbiuowbefiubwvformation ici', 2)"
+        >
+            <div  style="top: 50%; left: 40%;"
+                  class="bsolute w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-white cursor-pointer">
+
+            </div>
+        </div>
+
+        <!-- Node 3 -->
+        <div
+                id="node3"
+                style="top: 50%; left: 80%;"
+                class="absolute w-8 h-8 bg-blue-500 hover:bg-blue-700 rounded-full flex items-center justify-center text-white cursor-pointer"
+                onclick="showTooltip('Node 3: Pgf3wlkjbvwjbnvownfoiovnoiw3nfvoienvlus de détails ici', 3)"
+        >
+            <div  style="top: 50%; left: 40%;"
+                  class="bsolute w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-white cursor-pointer">
+
+            </div>
+        </div>
+        <!-- Info-bulle -->
+        <div
+                style="top: -10%; left: 0%;"
+                id="info_bulle"
+                class="absolute bg-gray-800 text-white p-2 rounded shadow hiddenInfo w-64"
+        >
+
+            <p>lorem Ipsum</p>
+            <!-- Le texte est inséré ici dynamiquement -->
+        </div>
+    </div>
+
+    <script>
+
+        function showTooltip(text, id) {
+
+            // get the node by id and delte child
+
+
+            const node = document.getElementById('node' + id);
+            const child = node.children[0];
+
+
+            const infoBulle = document.getElementById('info_bulle');
+
+            infoBulle.innerHTML = text;
+
+            if (infoBulle.classList.contains('hiddenInfo')) {
+                infoBulle.classList.remove('hiddenInfo');
+                child.classList.add('hiddenInfo');
+                node.style.backgroundColor = 'green';
+
+
+
+            }
+            else {
+                infoBulle.classList.add('hiddenInfo');
+                child.classList.remove('hiddenInfo');
+                node.style.backgroundColor = '#3b82f6';
+                nodeSelected = null;
+            }
+
+        }
+
+        function hideTooltip(event) {
+
+        }
+    </script>
+
+
+
+<div class="relative">
+    <!-- Image principale -->
+    <img src="../src/imgs/main/human.jpg" alt="Image principale" class="w-full h-auto">
+
+    <!-- Node 1 -->
+    <div
+            style="top: 50%; left: 40%;"
+            class="absolute w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white cursor-pointer"
+            onclick="alert('Node 1 clicked!')"
+    >
+        1
+    </div>
+
+    <!-- Node 2 -->
+    <div
+            style="top: 50%; left: 60%;"
+            class="absolute w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white cursor-pointer"
+            onclick="alert('Node 2 clicked!')"
+    >
+        2
+    </div>
+
+    <!-- Node 3 -->
+    <div
+            style="top: 50%; left: 80%;"
+            class="absolute  w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white cursor-pointer"
+            onclick="alert('Node 3 clicked!')"
+    >
+        3
+    </div>
+</div>
+
+</div>
 </body>
-</html>
+        </html>
