@@ -9,20 +9,20 @@
 </head>
 <body class="bg-gray-100">
 <div class="relative">
-    <input type="checkbox" id="menu-toggle" class="peer absolute -top-10 -left-10"/>
-    <label for="menu-toggle" class="cursor-pointer w-8 h-8 flex items-center justify-center">
-        <img id="menu-icon" src="imgs/global/open.svg" alt="Menu Toggle" class="w-6 h-6">
+    <input type="checkbox" id="menu-toggle" class="peer absolute -top-10 -left-10 z-50"/>
+    <label for="menu-toggle" class="cursor-pointer w-8 h-8 flex items-center justify-center z-50">
+        <img id="menu-icon" src="imgs/global/open.svg" alt="Menu Toggle" class="w-6 h-6 z-50">
     </label>
 
     <!-- Burger Menu -->
     <div
             id="burger"
-            class="w-60 h-screen pl-8 bg-red-600 absolute top-0 left-0 transition-transform duration-300 transform -translate-x-full peer-checked:translate-x-0 peer-checked:-z-30"
+            class="w-60 h-screen pl-8 bg-red-600 absolute top-0 left-0 transition-transform duration-300 transform -translate-x-full peer-checked:translate-x-0 "
     >
         <!-- Your menu content -->
         <div class="pt-10">
-            <p><a href="index.html" class="text-white mt-8 z-20">Accueil</a></p>
-            <p><a href="advent.html" class="text-white mt-4 z-20">Calendrier</a></p>
+            <p><a href="index.html" class="text-white mt-8 ">Accueil</a></p>
+            <p><a href="advent.html" class="text-white mt-4">Calendrier</a></p>
         </div>
     </div>
 
