@@ -96,10 +96,10 @@
             </div>
         </div>
         <div id="customPopupBis" style="display: none;">
-            <div style="position: fixed; top: 25%; left: 50%; transform: translate(-50%, -50%); width: 800px; background: white; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5); text-align: center; padding: 20px;">
+            <div style="position: fixed; top: 25%; left: 50%; transform: translate(-50%, -50%); width: 200px; background: white; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5); text-align: center; padding: 20px;">
                 <span id="closePopupBis" style="position: absolute; top: 10px; right: 10px; cursor: pointer; font-size: 18px;">&times;</span>
-                <p>Une petite citation dans l'esprit de noel</p>
-                <img id="image5BisBis" src="imgs/advent/quote.png" alt="Image" style="width: 450px; height: 300px; display: block; margin: auto;">
+                <p>Oh non! Le grinch!!</p>
+                <img id="image5BisBis" src="imgs/advent/grinch.png" alt="Image" style="width: 450px; height: 300px; display: block; margin: auto;">
             </div>
         </div>
 
@@ -354,33 +354,42 @@
         </script>
 
         <script>
-                document.location.href="https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            document.addEventListener("DOMContentLoaded", function () {
                 let btn5 = document.getElementById("button5");
                 let popup = document.getElementById("customPopupBis");
                 let closeBtn = document.getElementById("closePopupBis");
 
+                // Ensure button exists before adding an event listener
+                if (btn5) {
                 btn5.addEventListener("click", function () {
-                    // Afficher la popup
-                    popup.style.display = 'block';
+                    document.location.href="https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
-                    // Modifier l'image si nécessaire
-                    let img = document.getElementById('image5');
-                    img.style.width = '150px';
-                    img.style.height = '185px';
-                    img.src = 'imgs/advent/greycadeau.png';
-                });
+                popup.style.display = 'block';
 
-// Fermer la popup en cliquant sur la croix
+                // Modify the image if necessary
+                let img = document.getElementById('image5BisBis'); // Corrected ID
+                img.style.width = '150px';
+                img.style.height = '185px';
+                img.src = 'imgs/advent/grinch.png';
+            });
+            }
+
+                // Close the popup when the close button is clicked
+                if (closeBtn) {
                 closeBtn.addEventListener("click", function () {
-                    popup.style.display = 'none';
-                });
+                popup.style.display = 'none';
+            });
+            }
 
-// Fermer la popup si on clique en dehors de la fenêtre
+                // Close the popup when clicking outside the content
+                if (popup) {
                 popup.addEventListener("click", function (event) {
-                    if (event.target === popup) {
-                        popup.style.display = 'none';
-                    }
-                });
+                if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+            });
+            }
+            });
         </script>
 
         <script>
