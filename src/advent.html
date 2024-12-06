@@ -23,10 +23,9 @@
 
         /* Style for the close button */
         .close-btn {
-            display: none;
             position: absolute;
-            top: 120px;
-            left: 1150px;
+            top: 20px;
+            left: 1200px;
             background-color: transparent;
             border: none;
             font-size: 20px;
@@ -202,9 +201,7 @@
             btn3.addEventListener("click", function () {
                 let img = document.getElementById('image3');
                 let youtubePlayer = document.getElementById('youtubePlayer');
-                let closeBtn = document.getElementById("closeBtn");
 
-                closeBtn.style.display = 'block';
                 youtubePlayer.style.display = 'block'; // Show the iframe
                 img.style.width = '56px';
                 img.style.height = '56px';
@@ -221,6 +218,8 @@
             let btn4 = document.getElementById("button4");
 
             btn4.addEventListener("click", function () {
+                alert('Tout vient à point à qui sait attendre ;)');
+
                 let img = document.getElementById('image4');
                 img.style.width = '56px';
                 img.style.height = '56px';
