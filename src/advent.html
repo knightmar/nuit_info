@@ -6,6 +6,39 @@
     <title>Calendrier</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style/output.css" rel="stylesheet">
+    <style>
+
+        #youtubePlayer {
+            display: none; /* Hide the YouTube iframe initially */
+            margin-top: 20px;
+            margin-left: 600px;
+            position: absolute; /* Position for the close button */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Style for the close button */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            left: 1200px;
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+            z-index: 1; /* Ensure the button is above the video */
+        }
+        .close-btn:hover {
+            color: red;
+        }
+
+
+    </style>
 </head>
 <body class="bg-green-700 ">
 <h1 class="text-5xl text-center font-bold text-black ">
@@ -14,6 +47,10 @@
     <br>
     <br>
 </h1>
+<iframe class = "place-content-center" id="youtubePlayer" width="560" height="315"
+        src="https://www.youtube.com/embed/Jh6vuVhibDs?autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture " allowfullscreen>
+</iframe>
+<button id="closeBtn" class="close-btn">X</button>
 
 <div class="grid grid-rows-6  grid-cols-6 gap-2 ml-20">
     <div>
@@ -38,6 +75,7 @@
 
         </button>
     </div>
+
 
     <div>
         <button type="submit" id = "button4">
@@ -121,7 +159,7 @@
     let btn2 = document.getElementById("button2");
 
     btn2.addEventListener("click", function () {
-        alert('Tout vient à point à qui sait attendre ;)');
+        prompt("quel cadeau souhaite tu le plus ?")
 
         let img = document.getElementById('image2');
         img.style.width = '150px';
@@ -133,15 +171,22 @@
 
 <script>
     let btn3 = document.getElementById("button3");
+    let closeBtn = document.getElementById("closeBtn");
+    let youtubePlayer = document.getElementById("youtubePlayer");
 
     btn3.addEventListener("click", function () {
-        alert('Tout vient à point à qui sait attendre ;)');
-
         let img = document.getElementById('image3');
+        let youtubePlayer = document.getElementById('youtubePlayer');
+
+        youtubePlayer.style.display = 'block'; // Show the iframe
         img.style.width = '150px';
         img.style.height = '185px';
         img.style.display = 'block';
         img.src = 'imgs/advent/greycadeau.png';
+    });
+    closeBtn.addEventListener("click", function () {
+        youtubePlayer.style.display = 'none'; // Hide the iframe
+        closeBtn.style.display = 'none'; // Hide the close button
     });
 </script>
 
