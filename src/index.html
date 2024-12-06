@@ -17,7 +17,8 @@
          }
     </style>
 </head>
-<body class="flex justify-center items-center min-h-screen bg-gray-100">
+<body >
+
 <div class="relative">
     <input type="checkbox" id="menu-toggle" class="peer absolute -top-10 -left-10 z-50"/>
     <label for="menu-toggle" class="cursor-pointer w-8 h-8 flex items-center justify-center z-50">
@@ -38,6 +39,7 @@
     </div>
     <div class="pl-8 transition-transform duration-300 transform translate-x-0 peer-checked:translate-x-60">
 
+        <div class="flex justify-center items-center min-h-screen bg-gray-100">
         <div class="hidden can-click" id="can-click">
         </div>
         <div class="grid grid-cols-2 gap-4">
@@ -171,6 +173,7 @@
         </div>
     </div>
 </div>
+</div>
 
 <script>
     const menuToggle = document.getElementById('menu-toggle');
@@ -186,5 +189,6 @@
         }
     });
 </script>
+
 </body>
 </html>
