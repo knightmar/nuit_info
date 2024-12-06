@@ -339,6 +339,14 @@ width: 400px;height: 250px;"
 
                     let isSelect = "0";
 
+                    function spawnPlastique(){
+                        // spawn at random coor in the image
+                        const image = "<img src='../src/imgs/main/plastique.png' style='position: absolute; top: " + Math.floor(Math.random() * 100) + "%; left: " + Math.floor(Math.random() * 100) + "%; width: 100px; height: 100px;'>";
+
+                        document.getElementById('spawn').innerHTML = image + document.getElementById('spawn').innerHTML;
+
+                    }
+
 
                     function showTooltip(text, id, correspondence) {
 
@@ -393,6 +401,7 @@ width: 400px;height: 250px;"
                             else {
                                 alert("Faux, Domage trouver la bonne correspondance")
                                 hideTooltip(correspondence)
+                                spawnPlastique()
                             }
                             console.log(isSelect)
                             console.log(correspondence)
@@ -421,6 +430,11 @@ width: 400px;height: 250px;"
     </div>
 
 
+</div>
+
+<div id="spawn">
+
+    </div>
 </div>
 
 <script>
