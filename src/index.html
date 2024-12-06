@@ -28,13 +28,25 @@
     <!-- Burger Menu -->
     <div
             id="burger"
-            class="w-60 h-screen pl-8 bg-red-600 absolute top-0 left-0 transition-transform duration-300 transform -translate-x-full peer-checked:translate-x-0 "
+            class="w-60 h-full pl-8 bg-perso-blue-300 absolute top-0 left-0 transition-transform duration-300 transform -translate-x-full peer-checked:translate-x-0 "
     >
         <!-- Your menu content -->
         <div class="pt-10">
-            <p><a href="index.html" class="text-white mt-8 ">Accueil</a></p>
-            <p><a href="advent.html" class="text-white mt-4">Calendrier</a></p>
-            <p><a href="about.html" class="text-white mt-4">À propos</a></p>
+            <p><a href="index.html" class="text-white mt-8 " style="font-size: 25px; margin-bottom: 12px;">Accueil</a>
+            </p>
+            <br>
+            <p><a href="podcast.html" class="text-white mt-4" style="font-size: 25px; margin-bottom: 12px;">Podcast</a>
+            </p>
+            <br>
+            <p><a href="about.html" class="text-white mt-4" style="font-size: 25px; margin-bottom: 12px;">À propos</a>
+            </p>
+            <br>
+            <hr style="border: none; border-top: 2px solid #fff; width: 50%; margin: 20px 0;">
+
+            <p><a href="advent.html" class="text-white mt-4"
+                  style="font-size: 25px; margin-bottom: 12px;">Calendrier</a></p>
+            <hr style="border: none; border-top: 2px solid #fff; width: 50%; margin: 20px 0;">
+
         </div>
     </div>
     <div class="pl-8 transition-transform duration-300 transform translate-x-0 peer-checked:translate-x-60">
@@ -200,7 +212,7 @@
 width: 400px;height: 250px;"
                     >
 
-                    <p>fniwbndfciunbf</p>
+                        <p>fniwbndfciunbf</p>
                         <!-- Le texte est inséré ici dynamiquement -->
 
 
@@ -223,7 +235,7 @@ width: 400px;height: 250px;"
 
 
                         if (infoBulle.classList.contains('hiddenInfo') && isSelect === "0") {
-                            infoBulle.innerHTML =  "<div onclick='hideTooltip(id)' class='bg-red-500 flex rounded-full cursor-pointer ' style='width: 65px; margin-right: 0;margin-left: auto;margin-top: 5px; margin-bottom: 5px;'> <p style='margin-right: auto;margin-left: auto;margin-top: auto;margin-bottom: auto; '>Fermer</p></div>" + text;
+                            infoBulle.innerHTML = "<div onclick='hideTooltip(id)' class='bg-red-500 flex rounded-full cursor-pointer ' style='width: 65px; margin-right: 0;margin-left: auto;margin-top: 5px; margin-bottom: 5px;'> <p style='margin-right: auto;margin-left: auto;margin-top: auto;margin-bottom: auto; '>Fermer</p></div>" + text;
 
 
                             infoBulle.classList.remove('hiddenInfo');
