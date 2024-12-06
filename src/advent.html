@@ -8,6 +8,14 @@
     <link href="./style/output.css" rel="stylesheet">
     <style>
 
+        @font-face {
+            font-family: ChristmasSquad;
+            src: url("../src/imgs/advent/font/noel/LastChristmas_PERSONAL_USE_ONLY.otf") format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        h1 { font-family: 'ChristmasSquad', sans-serif; }
+
         #youtubePlayer {
             display: none; /* Hide the YouTube iframe initially */
             margin-top: 20px;
@@ -83,11 +91,10 @@
     </div>
     <div class="pl-8 transition-transform duration-300 transform translate-x-0 peer-checked:translate-x-60">
 
-        <h1 class="text-5xl text-center font-bold text-black ">
-            <br>
+        <h1 class="text-8xl text-center text-white pt-8 pb-8">
             Calendrier de l'avent
             <br>
-            <br>
+
         </h1>
         <iframe class="place-content-center" id="youtubePlayer" width="560" height="315"
                 src="https://www.youtube.com/embed/Jh6vuVhibDs?autoplay=1"
@@ -111,7 +118,7 @@
         </div>
 
 
-        <div class="grid grid-rows-4  grid-cols-6 gap-2 ml-20">
+        <div class="grid grid-rows-4 grid-cols-6 gap-2 ml-20 font-mono">
             <div>
                 <button type="submit" id="button1">
                     <img id="image1" src="imgs/advent/cadeau3.png" alt="kado" height="150" width="150"/>
@@ -564,7 +571,7 @@
         <script>
 
             const NUMBER_OF_SNOWFLAKES = 200;
-            const MAX_SNOWFLAKE_SIZE = 3;
+            const MAX_SNOWFLAKE_SIZE = 5;
             const MAX_SNOWFLAKE_SPEED = 0.00000001;
             const SNOWFLAKE_COLOUR = '#ddd';
             const snowflakes = [];
