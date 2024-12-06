@@ -6,27 +6,68 @@
     <link href="./style/output.css" rel="stylesheet">
 </head>
 
-<body class="h-screen flex flex-col justify-center items-center m-0 p-4 bg-cover bg-center" style="background-image: url('imgs/podcast/background_bottom.webp');')">
-<!-- h-screen flex justify-center items-center m-0 p-4 bg-cover bg-center" style="background-image: url('imgs/background_bottom.webp');') -->
+<body>
+<div class="relative">
+    <input type="checkbox" id="menu-toggle" class="peer absolute -top-10 -left-10 z-50"/>
+    <label for="menu-toggle" class="cursor-pointer w-8 h-8 flex items-center justify-center z-50">
+        <img id="menu-icon" src="imgs/global/open.svg" alt="Menu Toggle" class="w-6 h-6 z-50">
+    </label>
 
-<h1 class="text-white text-4xl font-bold mb-8">Podcasts</h1>
-<div class="flex gap-8">
-    <!-- Vidéo 1 -->
-    <div class="w-6/12">
-        <video controls class="w-full rounded-lg">
-            <source src="videos/videoflorian.webm" type="video/webm">
-        </video>
-        <p class="mt-2 text-center text-white">Florian SEVELLEC, Responsable du laboratoire d’océanographie physique et spatiale, nous parle de l’influence des courants marins sur l’océan.</p>
+    <!-- Burger Menu -->
+    <div
+            id="burger"
+            class="w-60 h-screen pl-8 bg-perso-blue-300 absolute top-0 left-0 transition-transform duration-300 transform -translate-x-full peer-checked:translate-x-0 "
+    >
+        <!-- Your menu content -->
+        <div class="pt-10">
+            <p><a href="index.html" class="text-white mt-8 ">Accueil</a></p>
+            <p><a href="advent.html" class="text-white mt-4">Calendrier</a></p>
+            <p><a href="about.html" class="text-white mt-4">À propos</a></p>
+            <p><a href="podcast.html" class="text-white mt-4">Podcast</a></p>
+        </div>
     </div>
+    <div class="h-screen flex flex-col justify-center items-center m-0 p-4 bg-cover bg-center transition-transform duration-300 transform translate-x-0 peer-checked:translate-x-60"
+         style="background-image: url('imgs/podcast/background_bottom.webp');')">
+        <!-- h-screen flex justify-center items-center m-0 p-4 bg-cover bg-center" style="background-image: url('imgs/background_bottom.webp');') -->
 
-    <!-- Vidéo 2 -->
-    <div class="w-6/12">
-        <video controls class="w-full rounded-lg">
-            <source src="videos/videofred.webm" type="video/webm">
-        </video>
-        <p class="mt-2 text-center text-white">Frederic LE MOIGNE, Océanographe au CNRS, nous parle des principales menaces pour nos océans ainsi que du principe de la pompe biologique.</p>
+        <h1 class="text-white text-4xl font-bold mb-8">Podcasts</h1>
+        <div class="flex gap-8">
+            <!-- Vidéo 1 -->
+            <div class="w-6/12">
+                <video controls class="w-full rounded-lg">
+                    <source src="videos/videoflorian.webm" type="video/webm">
+                </video>
+                <p class="mt-2 text-center text-white">Florian SEVELLEC, Responsable du laboratoire d’océanographie
+                    physique
+                    et spatiale, nous parle de l’influence des courants marins sur l’océan.</p>
+            </div>
+
+            <!-- Vidéo 2 -->
+            <div class="w-6/12">
+                <video controls class="w-full rounded-lg">
+                    <source src="videos/videofred.webm" type="video/webm">
+                </video>
+                <p class="mt-2 text-center text-white">Frederic LE MOIGNE, Océanographe au CNRS, nous parle des
+                    principales
+                    menaces pour nos océans ainsi que du principe de la pompe biologique.</p>
+            </div>
+        </div>
     </div>
 </div>
 
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuIcon = document.getElementById('menu-icon');
+
+    menuToggle.addEventListener('change', () => {
+        if (menuToggle.checked) {
+            // Change to close icon when menu is open
+            menuIcon.src = "imgs/global/close.svg";
+        } else {
+            // Change back to burger icon when menu is closed
+            menuIcon.src = "imgs/global/open.svg";
+        }
+    });
+</script>
 </body>
 </html>
