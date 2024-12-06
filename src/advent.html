@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href= "imgs/advent/icone.png">
+    <link rel="icon" type="image/png" href="imgs/advent/icone.png">
     <title>Calendrier</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style/output.css" rel="stylesheet">
@@ -33,6 +33,7 @@
             cursor: pointer;
             z-index: 1; /* Ensure the button is above the video */
         }
+
         .close-btn:hover {
             color: red;
         }
@@ -41,403 +42,440 @@
     </style>
 </head>
 <body class="bg-green-700 ">
-<h1 class="text-5xl text-center font-bold text-black ">
-    <br>
-    calendrier de l'avent
-    <br>
-    <br>
-</h1>
-<iframe class = "place-content-center" id="youtubePlayer" width="560" height="315"
-        src="https://www.youtube.com/embed/Jh6vuVhibDs?autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture " allowfullscreen>
-</iframe>
-<button id="closeBtn" class="close-btn">X</button>
+<div class="relative">
+    <input type="checkbox" id="menu-toggle" class="peer absolute -top-10 -left-10 z-50"/>
+    <label for="menu-toggle" class="cursor-pointer w-8 h-8 flex items-center justify-center z-50">
+        <img id="menu-icon" src="imgs/global/open.svg" alt="Menu Toggle" class="w-6 h-6 z-50">
+    </label>
 
-<div class="grid grid-rows-6  grid-cols-6 gap-2 ml-20">
-    <div>
-        <button   type="submit" id = "button1">
-            <img id = "image1" src="imgs/advent/cadeau1.png" alt="kado" height="150" width="150"/>
-            <h3 class="text-white text-2xl">Jour 1</h3>
-        </button>
+    <!-- Burger Menu -->
+    <div
+            id="burger"
+            class="w-60 h-screen pl-8 bg-red-600 absolute top-0 left-0 transition-transform duration-300 transform -translate-x-full peer-checked:translate-x-0 "
+    >
+        <!-- Your menu content -->
+        <div class="pt-10">
+            <p><a href="index.html" class="text-white mt-8 ">Accueil</a></p>
+            <p><a href="advent.html" class="text-white mt-4">Calendrier</a></p>
+            <p><a href="about.html" class="text-white mt-4">À propos</a></p>
+        </div>
     </div>
+    <div class="pl-8 transition-transform duration-300 transform translate-x-0 peer-checked:translate-x-60">
 
-    <div>
-        <button type="submit" id = "button2">
-            <img id = "image2" src="imgs/advent/cadeau2.png" alt="kado" height="150" width="150"/>
-            <h3 class="text-white text-2xl">Jour 2</h3>
+        <h1 class="text-5xl text-center font-bold text-black ">
+            <br>
+            calendrier de l'avent
+            <br>
+            <br>
+        </h1>
+        <iframe class="place-content-center" id="youtubePlayer" width="560" height="315"
+                src="https://www.youtube.com/embed/Jh6vuVhibDs?autoplay=1"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture " allowfullscreen>
+        </iframe>
+        <button id="closeBtn" class="close-btn">X</button>
 
-        </button>
-    </div>
+        <div class="grid grid-rows-6  grid-cols-6 gap-2 ml-20">
+            <div>
+                <button type="submit" id="button1">
+                    <img id="image1" src="imgs/advent/cadeau1.png" alt="kado" height="150" width="150"/>
+                    <h3 class="text-white text-2xl">Jour 1</h3>
+                </button>
+            </div>
 
-    <div>
-        <button type="submit" id = "button3">
-            <img id = "image3" src="imgs/advent/cadeau3.png" alt="kado" height="150" width="150"/>
-            <h3 class="text-white text-2xl">Jour 3</h3>
+            <div>
+                <button type="submit" id="button2">
+                    <img id="image2" src="imgs/advent/cadeau2.png" alt="kado" height="150" width="150"/>
+                    <h3 class="text-white text-2xl">Jour 2</h3>
 
-        </button>
-    </div>
+                </button>
+            </div>
 
+            <div>
+                <button type="submit" id="button3">
+                    <img id="image3" src="imgs/advent/cadeau3.png" alt="kado" height="150" width="150"/>
+                    <h3 class="text-white text-2xl">Jour 3</h3>
 
-    <div>
-        <button type="submit" id = "button4">
-            <img id = "image4" src="imgs/advent/cadeau4.png" alt="kado" height="150" width="150"/>
-            <h3 class="text-white text-2xl">Jour 4</h3>
-
-        </button>
-    </div>
-
-    <div>
-        <button type="submit" id = "button5">
-            <img id = "image5" src="imgs/advent/cadeau2.png" alt="kado" height="150" width="150"/>
-            <h3 class="text-white text-2xl">Jour 5</h3>
-        </button>
-    </div>
-
-    <div>
-        <button type="submit" id = "button6">
-            <img id = "image6" src="imgs/advent/cadeau3.png" alt="kado" height="150" width="150"/>
-            <h3 class="text-white text-2xl">Jour 6</h3>
-        </button>
-    </div>
-
-    <div>
-        <button type="submit" id = "button7">
-            <img id = "image7" src="imgs/advent/cadeau4.png" alt="kado" height="150" width="150"/>
-            <h3 class="text-white text-2xl">Jour 7</h3>
-        </button>
-    </div>
-    <div>
-        <button type="submit" id = "button8">
-            <img id = "image8" src="imgs/advent/cadeau1.png" alt="kado" height="150" width="150"/>
-            <h3 class="text-white text-2xl">Jour 8</h3>
-        </button>
-    </div>
-
-    <div>
-        <button type="submit" id = "button9">
-            <img id = "image9" src="imgs/advent/cadeau3.png" alt="kado" height="150" width="150"/>
-            <h3 class="text-white text-2xl">Jour 9</h3>
-        </button>
-    </div>
-
-    <div>
-        <button type="submit" id = "button10">
-            <img id = "image10" src="imgs/advent/cadeau4.png" alt="kado" height="150" width="150"/>
-            <h3 class="text-white text-2xl">Jour 10</h3>
-        </button>
-    </div>
-
-    <div>
-        <button type="submit" id = "button11">
-            <img id = "image11" src="imgs/advent/cadeau1.png" alt="kado" height="150" width="150"/>
-            <h3 class="text-white text-2xl">Jour 11</h3>
-        </button>
-    </div>
-
-    <div>
-        <button type="submit" id = "button12">
-            <img id = "image12" src="imgs/advent/cadeau2.png" alt="kado" height="150" width="150"/>
-            <h3 class="text-white text-2xl">Jour 12</h3>
-        </button>
-    </div>
-
-</div>
-<script>
-    let btn1 = document.getElementById("button1");
-
-    btn1.addEventListener("click", function () {
-        alert('Tout vient à point à qui sait attendre ;)');
-
-        let img = document.getElementById('image1');
-        img.style.width = '150px';
-        img.style.height = '185px';
-        img.style.display = 'block';
-        img.src = 'imgs/advent/greycadeau.png';
-    });
-</script>
-
-<script>
-    let btn2 = document.getElementById("button2");
-
-    btn2.addEventListener("click", function () {
-        prompt("quel cadeau souhaite tu le plus ?")
-
-        let img = document.getElementById('image2');
-        img.style.width = '150px';
-        img.style.height = '185px';
-        img.style.display = 'block';
-        img.src = 'imgs/advent/greycadeau.png';
-    });
-</script>
-
-<script>
-    let btn3 = document.getElementById("button3");
-    let closeBtn = document.getElementById("closeBtn");
-    let youtubePlayer = document.getElementById("youtubePlayer");
-
-    btn3.addEventListener("click", function () {
-        let img = document.getElementById('image3');
-        let youtubePlayer = document.getElementById('youtubePlayer');
-
-        youtubePlayer.style.display = 'block'; // Show the iframe
-        img.style.width = '150px';
-        img.style.height = '185px';
-        img.style.display = 'block';
-        img.src = 'imgs/advent/greycadeau.png';
-    });
-    closeBtn.addEventListener("click", function () {
-        youtubePlayer.style.display = 'none'; // Hide the iframe
-        closeBtn.style.display = 'none'; // Hide the close button
-    });
-</script>
-
-<script>
-    let btn4 = document.getElementById("button4");
-
-    btn4.addEventListener("click", function () {
-        alert('Tout vient à point à qui sait attendre ;)');
-
-        let img = document.getElementById('image4');
-        img.style.width = '150px';
-        img.style.height = '185px';
-        img.style.display = 'block';
-        img.src = 'imgs/advent/greycadeau.png';
-    });
-</script>
-
-<script>
-    let btn5 = document.getElementById("button5");
-
-    btn5.addEventListener("click", function () {
-        alert('Tout vient à point à qui sait attendre ;)');
-
-        let img = document.getElementById('image5');
-        img.style.width = '150px';
-        img.style.height = '185px';
-        img.style.display = 'block';
-        img.src = 'imgs/advent/greycadeau.png';
-    });
-</script>
-
-<script>
-    let btn6 = document.getElementById("button6");
-
-    btn6.addEventListener("click", function () {
-        alert('Tout vient à point à qui sait attendre ;)');
-
-        let img = document.getElementById('image6');
-        img.style.width = '150px';
-        img.style.height = '185px';
-        img.style.display = 'block';
-        img.src = 'imgs/advent/greycadeau.png';
-    });
-</script>
-
-<script>
-    let btn7 = document.getElementById("button7");
-
-    btn7.addEventListener("click", function () {
-        alert('Tout vient à point à qui sait attendre ;)');
-
-        let img = document.getElementById('image7');
-        img.style.width = '150px';
-        img.style.height = '185px';
-        img.style.display = 'block';
-        img.src = 'imgs/advent/greycadeau.png';
-    });
-</script>
-
-<script>
-    let btn8 = document.getElementById("button8");
-
-    btn8.addEventListener("click", function () {
-        alert('Tout vient à point à qui sait attendre ;)');
-
-        let img = document.getElementById('image8');
-        img.style.width = '150px';
-        img.style.height = '185px';
-        img.style.display = 'block';
-        img.src = 'imgs/advent/greycadeau.png';
-    });
-</script>
-
-<script>
-    let btn9 = document.getElementById("button9");
-
-    btn9.addEventListener("click", function () {
-        alert('Tout vient à point à qui sait attendre ;)');
-
-        let img = document.getElementById('image9');
-        img.style.width = '150px';
-        img.style.height = '185px';
-        img.style.display = 'block';
-        img.src = 'imgs/advent/greycadeau.png';
-    });
-</script>
-
-<script>
-    let btn9 = document.getElementById("button9");
-
-    btn9.addEventListener("click", function () {
-        alert('Tout vient à point à qui sait attendre ;)');
-
-        let img = document.getElementById('image9');
-        img.style.width = '150px';
-        img.style.height = '185px';
-        img.style.display = 'block';
-        img.src = 'imgs/advent/greycadeau.png';
-    });
-</script>
-
-<script>
-    let btn10 = document.getElementById("button10");
-
-    btn10.addEventListener("click", function () {
-        alert('Tout vient à point à qui sait attendre ;)');
-
-        let img = document.getElementById('image10');
-        img.style.width = '150px';
-        img.style.height = '185px';
-        img.style.display = 'block';
-        img.src = 'imgs/advent/greycadeau.png';
-    });
-</script>
-
-<script>
-    let btn11 = document.getElementById("button11");
-
-    btn11.addEventListener("click", function () {
-        alert('Tout vient à point à qui sait attendre ;)');
-
-        let img = document.getElementById('image11');
-        img.style.width = '150px';
-        img.style.height = '185px';
-        img.style.display = 'block';
-        img.src = 'imgs/advent/greycadeau.png';
-    });
-</script>
-
-<script>
-    let btn12 = document.getElementById("button12");
-
-    btn12.addEventListener("click", function () {
-        alert('Tout vient à point à qui sait attendre ;)');
-
-        let img = document.getElementById('image12');
-        img.style.width = '150px';
-        img.style.height = '185px';
-        img.style.display = 'block';
-        img.src = 'imgs/advent/greycadeau.png';
-    });
-</script>
+                </button>
+            </div>
 
 
-<script>
-    const activationDates = {
-        button1: new Date('2024-12-01T00:00:00'),
-        button2: new Date('2024-12-02T00:00:00'),
-        button3: new Date('2024-12-03T00:00:00'),
-        button4: new Date('2024-12-04T00:00:00'),
-        button5: new Date('2024-12-05T00:00:00'),
-        button6: new Date('2024-12-06T00:00:00'),
-        button7: new Date('2024-12-07T00:00:00'),
-        button8: new Date('2024-12-08T00:00:00'),
-        button9: new Date('2024-12-09T00:00:00'),
-        button10: new Date('2024-12-10T00:00:00'),
-        button11: new Date('2024-12-11T00:00:00'),
-        button12: new Date('2024-12-12T00:00:00'),
-    };
+            <div>
+                <button type="submit" id="button4">
+                    <img id="image4" src="imgs/advent/cadeau4.png" alt="kado" height="150" width="150"/>
+                    <h3 class="text-white text-2xl">Jour 4</h3>
 
-    function checkButtonsState() {
-        const now = new Date();
+                </button>
+            </div>
 
-        for (const [buttonId, activationDate] of Object.entries(activationDates)) {
-            const button = document.getElementById(buttonId);
+            <div>
+                <button type="submit" id="button5">
+                    <img id="image5" src="imgs/advent/cadeau2.png" alt="kado" height="150" width="150"/>
+                    <h3 class="text-white text-2xl">Jour 5</h3>
+                </button>
+            </div>
 
-            if (now >= activationDate) {
-                button.disabled = false; // Activer le bouton
-            } else {
-                button.disabled = true; // Désactiver le bouton
+            <div>
+                <button type="submit" id="button6">
+                    <img id="image6" src="imgs/advent/cadeau3.png" alt="kado" height="150" width="150"/>
+                    <h3 class="text-white text-2xl">Jour 6</h3>
+                </button>
+            </div>
+
+            <div>
+                <button type="submit" id="button7">
+                    <img id="image7" src="imgs/advent/cadeau4.png" alt="kado" height="150" width="150"/>
+                    <h3 class="text-white text-2xl">Jour 7</h3>
+                </button>
+            </div>
+            <div>
+                <button type="submit" id="button8">
+                    <img id="image8" src="imgs/advent/cadeau1.png" alt="kado" height="150" width="150"/>
+                    <h3 class="text-white text-2xl">Jour 8</h3>
+                </button>
+            </div>
+
+            <div>
+                <button type="submit" id="button9">
+                    <img id="image9" src="imgs/advent/cadeau3.png" alt="kado" height="150" width="150"/>
+                    <h3 class="text-white text-2xl">Jour 9</h3>
+                </button>
+            </div>
+
+            <div>
+                <button type="submit" id="button10">
+                    <img id="image10" src="imgs/advent/cadeau4.png" alt="kado" height="150" width="150"/>
+                    <h3 class="text-white text-2xl">Jour 10</h3>
+                </button>
+            </div>
+
+            <div>
+                <button type="submit" id="button11">
+                    <img id="image11" src="imgs/advent/cadeau1.png" alt="kado" height="150" width="150"/>
+                    <h3 class="text-white text-2xl">Jour 11</h3>
+                </button>
+            </div>
+
+            <div>
+                <button type="submit" id="button12">
+                    <img id="image12" src="imgs/advent/cadeau2.png" alt="kado" height="150" width="150"/>
+                    <h3 class="text-white text-2xl">Jour 12</h3>
+                </button>
+            </div>
+
+        </div>
+        <script>
+            let btn1 = document.getElementById("button1");
+
+            btn1.addEventListener("click", function () {
+                alert('Tout vient à point à qui sait attendre ;)');
+
+                let img = document.getElementById('image1');
+                img.style.width = '150px';
+                img.style.height = '185px';
+                img.style.display = 'block';
+                img.src = 'imgs/advent/greycadeau.png';
+            });
+        </script>
+
+        <script>
+            let btn2 = document.getElementById("button2");
+
+            btn2.addEventListener("click", function () {
+                prompt("quel cadeau souhaite tu le plus ?")
+
+                let img = document.getElementById('image2');
+                img.style.width = '150px';
+                img.style.height = '185px';
+                img.style.display = 'block';
+                img.src = 'imgs/advent/greycadeau.png';
+            });
+        </script>
+
+        <script>
+            let btn3 = document.getElementById("button3");
+            let closeBtn = document.getElementById("closeBtn");
+            let youtubePlayer = document.getElementById("youtubePlayer");
+
+            btn3.addEventListener("click", function () {
+                let img = document.getElementById('image3');
+                let youtubePlayer = document.getElementById('youtubePlayer');
+
+                youtubePlayer.style.display = 'block'; // Show the iframe
+                img.style.width = '150px';
+                img.style.height = '185px';
+                img.style.display = 'block';
+                img.src = 'imgs/advent/greycadeau.png';
+            });
+            closeBtn.addEventListener("click", function () {
+                youtubePlayer.style.display = 'none'; // Hide the iframe
+                closeBtn.style.display = 'none'; // Hide the close button
+            });
+        </script>
+
+        <script>
+            let btn4 = document.getElementById("button4");
+
+            btn4.addEventListener("click", function () {
+                alert('Tout vient à point à qui sait attendre ;)');
+
+                let img = document.getElementById('image4');
+                img.style.width = '150px';
+                img.style.height = '185px';
+                img.style.display = 'block';
+                img.src = 'imgs/advent/greycadeau.png';
+            });
+        </script>
+
+        <script>
+            let btn5 = document.getElementById("button5");
+
+            btn5.addEventListener("click", function () {
+                alert('Tout vient à point à qui sait attendre ;)');
+
+                let img = document.getElementById('image5');
+                img.style.width = '150px';
+                img.style.height = '185px';
+                img.style.display = 'block';
+                img.src = 'imgs/advent/greycadeau.png';
+            });
+        </script>
+
+        <script>
+            let btn6 = document.getElementById("button6");
+
+            btn6.addEventListener("click", function () {
+                alert('Tout vient à point à qui sait attendre ;)');
+
+                let img = document.getElementById('image6');
+                img.style.width = '150px';
+                img.style.height = '185px';
+                img.style.display = 'block';
+                img.src = 'imgs/advent/greycadeau.png';
+            });
+        </script>
+
+        <script>
+            let btn7 = document.getElementById("button7");
+
+            btn7.addEventListener("click", function () {
+                alert('Tout vient à point à qui sait attendre ;)');
+
+                let img = document.getElementById('image7');
+                img.style.width = '150px';
+                img.style.height = '185px';
+                img.style.display = 'block';
+                img.src = 'imgs/advent/greycadeau.png';
+            });
+        </script>
+
+        <script>
+            let btn8 = document.getElementById("button8");
+
+            btn8.addEventListener("click", function () {
+                alert('Tout vient à point à qui sait attendre ;)');
+
+                let img = document.getElementById('image8');
+                img.style.width = '150px';
+                img.style.height = '185px';
+                img.style.display = 'block';
+                img.src = 'imgs/advent/greycadeau.png';
+            });
+        </script>
+
+        <script>
+            let btn9 = document.getElementById("button9");
+
+            btn9.addEventListener("click", function () {
+                alert('Tout vient à point à qui sait attendre ;)');
+
+                let img = document.getElementById('image9');
+                img.style.width = '150px';
+                img.style.height = '185px';
+                img.style.display = 'block';
+                img.src = 'imgs/advent/greycadeau.png';
+            });
+        </script>
+
+        <script>
+            let btn9 = document.getElementById("button9");
+
+            btn9.addEventListener("click", function () {
+                alert('Tout vient à point à qui sait attendre ;)');
+
+                let img = document.getElementById('image9');
+                img.style.width = '150px';
+                img.style.height = '185px';
+                img.style.display = 'block';
+                img.src = 'imgs/advent/greycadeau.png';
+            });
+        </script>
+
+        <script>
+            let btn10 = document.getElementById("button10");
+
+            btn10.addEventListener("click", function () {
+                alert('Tout vient à point à qui sait attendre ;)');
+
+                let img = document.getElementById('image10');
+                img.style.width = '150px';
+                img.style.height = '185px';
+                img.style.display = 'block';
+                img.src = 'imgs/advent/greycadeau.png';
+            });
+        </script>
+
+        <script>
+            let btn11 = document.getElementById("button11");
+
+            btn11.addEventListener("click", function () {
+                alert('Tout vient à point à qui sait attendre ;)');
+
+                let img = document.getElementById('image11');
+                img.style.width = '150px';
+                img.style.height = '185px';
+                img.style.display = 'block';
+                img.src = 'imgs/advent/greycadeau.png';
+            });
+        </script>
+
+        <script>
+            let btn12 = document.getElementById("button12");
+
+            btn12.addEventListener("click", function () {
+                alert('Tout vient à point à qui sait attendre ;)');
+
+                let img = document.getElementById('image12');
+                img.style.width = '150px';
+                img.style.height = '185px';
+                img.style.display = 'block';
+                img.src = 'imgs/advent/greycadeau.png';
+            });
+        </script>
+
+
+        <script>
+            const activationDates = {
+                button1: new Date('2024-12-01T00:00:00'),
+                button2: new Date('2024-12-02T00:00:00'),
+                button3: new Date('2024-12-03T00:00:00'),
+                button4: new Date('2024-12-04T00:00:00'),
+                button5: new Date('2024-12-05T00:00:00'),
+                button6: new Date('2024-12-06T00:00:00'),
+                button7: new Date('2024-12-07T00:00:00'),
+                button8: new Date('2024-12-08T00:00:00'),
+                button9: new Date('2024-12-09T00:00:00'),
+                button10: new Date('2024-12-10T00:00:00'),
+                button11: new Date('2024-12-11T00:00:00'),
+                button12: new Date('2024-12-12T00:00:00'),
+            };
+
+            function checkButtonsState() {
+                const now = new Date();
+
+                for (const [buttonId, activationDate] of Object.entries(activationDates)) {
+                    const button = document.getElementById(buttonId);
+
+                    if (now >= activationDate) {
+                        button.disabled = false; // Activer le bouton
+                    } else {
+                        button.disabled = true; // Désactiver le bouton
+                    }
+                }
             }
-        }
-    }
 
-    // Vérification initiale
-    checkButtonsState();
+            // Vérification initiale
+            checkButtonsState();
 
-    // Mise à jour toutes les secondes
-    setInterval(checkButtonsState, 1000);
-</script>
+            // Mise à jour toutes les secondes
+            setInterval(checkButtonsState, 1000);
+        </script>
 
-<script>
+        <script>
 
-    const NUMBER_OF_SNOWFLAKES = 200;
-    const MAX_SNOWFLAKE_SIZE = 3;
-    const MAX_SNOWFLAKE_SPEED = 0.00000001;
-    const SNOWFLAKE_COLOUR = '#ddd';
-    const snowflakes = [];
+            const NUMBER_OF_SNOWFLAKES = 200;
+            const MAX_SNOWFLAKE_SIZE = 3;
+            const MAX_SNOWFLAKE_SPEED = 0.00000001;
+            const SNOWFLAKE_COLOUR = '#ddd';
+            const snowflakes = [];
 
-    const canvas = document.createElement('canvas');
-    canvas.style.position = 'absolute';
-    canvas.style.pointerEvents = 'none';
-    canvas.style.top = '0px';
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    document.body.appendChild(canvas);
+            const canvas = document.createElement('canvas');
+            canvas.style.position = 'absolute';
+            canvas.style.pointerEvents = 'none';
+            canvas.style.top = '0px';
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            document.body.appendChild(canvas);
 
-    const ctx = canvas.getContext('2d');
+            const ctx = canvas.getContext('2d');
 
 
-    const createSnowflake = () => ({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        radius: Math.floor(Math.random() * MAX_SNOWFLAKE_SIZE) + 1,
-        color: SNOWFLAKE_COLOUR,
-        speed: Math.random() * MAX_SNOWFLAKE_SPEED + 1,
-        sway: Math.random() - 0.5 // next
-    });
+            const createSnowflake = () => ({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                radius: Math.floor(Math.random() * MAX_SNOWFLAKE_SIZE) + 1,
+                color: SNOWFLAKE_COLOUR,
+                speed: Math.random() * MAX_SNOWFLAKE_SPEED + 1,
+                sway: Math.random() - 0.5 // next
+            });
 
-    const drawSnowflake = snowflake => {
-        ctx.beginPath();
-        ctx.arc(snowflake.x, snowflake.y, snowflake.radius, 0, Math.PI * 2);
-        ctx.fillStyle = snowflake.color;
-        ctx.fill();
-        ctx.closePath();
-    }
+            const drawSnowflake = snowflake => {
+                ctx.beginPath();
+                ctx.arc(snowflake.x, snowflake.y, snowflake.radius, 0, Math.PI * 2);
+                ctx.fillStyle = snowflake.color;
+                ctx.fill();
+                ctx.closePath();
+            }
 
-    const updateSnowflake = snowflake => {
-        snowflake.y += snowflake.speed;
-        snowflake.x += snowflake.sway; // next
-        if (snowflake.y > canvas.height) {
-            Object.assign(snowflake, createSnowflake());
-        }
-    }
+            const updateSnowflake = snowflake => {
+                snowflake.y += snowflake.speed;
+                snowflake.x += snowflake.sway; // next
+                if (snowflake.y > canvas.height) {
+                    Object.assign(snowflake, createSnowflake());
+                }
+            }
 
-    const animate = () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+            const animate = () => {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        snowflakes.forEach(snowflake => {
-            updateSnowflake(snowflake);
-            drawSnowflake(snowflake);
+                snowflakes.forEach(snowflake => {
+                    updateSnowflake(snowflake);
+                    drawSnowflake(snowflake);
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            for (let i = 0; i < NUMBER_OF_SNOWFLAKES; i++) {
+                snowflakes.push(createSnowflake());
+            }
+
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+
+            window.addEventListener('scroll', () => {
+                canvas.style.top = `${window.scrollY}px`;
+            });
+            animate()
+        </script>
+
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuToggle.addEventListener('change', () => {
+            if (menuToggle.checked) {
+                // Change to close icon when menu is open
+                menuIcon.src = "imgs/global/close.svg";
+            } else {
+                // Change back to burger icon when menu is closed
+                menuIcon.src = "imgs/global/open.svg";
+            }
         });
-
-        requestAnimationFrame(animate);
-    }
-
-    for (let i = 0; i < NUMBER_OF_SNOWFLAKES; i++) {
-        snowflakes.push(createSnowflake());
-    }
-
-    window.addEventListener('resize', () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    });
-
-    window.addEventListener('scroll', () => {
-        canvas.style.top = `${window.scrollY}px`;
-    });
-    animate()
-</script>
-
-
+    </script>
+</div>
 </body>
 </html>
