@@ -2,22 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About page for the Race for Water association project.">
+    <title>Title</title>
     <link href="./style/output.css" rel="stylesheet">
 </head>
-<body>
-<h1 class="text-3xl underline font-bold">
-    A propos
-</h1>
+<body class="bg-gray-100">
+<div class="relative">
+    <input type="checkbox" id="menu-toggle" class="peer absolute -top-10 -left-10 z-50"/>
+    <label for="menu-toggle" class="cursor-pointer w-8 h-8 flex items-center justify-center z-50">
+        <img id="menu-icon" src="imgs/global/open.svg" alt="Menu Toggle" class="w-6 h-6 z-50">
+    </label>
 
-<div>
-    <p>
-        Ce site web a été réalisé pour l'association <a target="_blank" href="https://www.raceforwater.org/"
-                                                        class="links">Race for water</a>
-        dans le cadre de la <a target="_blank" href="https://nuitdelinfo.com" class="links">
-        nuit de l'info</a>
-    </p>
+    <!-- Burger Menu -->
+    <div
+            id="burger"
+            class="w-60 h-screen pl-8 bg-red-600 absolute top-0 left-0 transition-transform duration-300 transform -translate-x-full peer-checked:translate-x-0 "
+    >
+        <!-- Your menu content -->
+        <div class="pt-10">
+            <p><a href="index.html" class="text-white mt-8 ">Accueil</a></p>
+            <p><a href="advent.html" class="text-white mt-4">Calendrier</a></p>
+            <p><a href="about.html" class="text-white mt-4">À propos</a></p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="pl-8 transition-transform duration-300 transform translate-x-0 peer-checked:translate-x-60">
+        <!-- About Section -->
+        <div>
+            <h1 class="text-3xl underline font-bold mb-4">
+                À propos
+            </h1>
+            <p class="mb-4">
+                Ce site web a été réalisé pour l'association
+                <a href="https://www.raceforwater.org/" target="_blank" class="text-blue-500 hover:underline">
+                    Race for Water
+                </a> dans le cadre de la
+                <a href="https://nuitdelinfo.com" target="_blank" class="text-blue-500 hover:underline">
+                    Nuit de l'info
+                </a>.
+            </p>
+        </div>
+
+        <!-- Technologies Section -->
+        <div>
+            <h1 class="text-3xl underline font-bold mb-4">
+                Technologies utilisées
+            </h1>
+            <p class="mb-4">Pour ce projet, nous avons utilisé les technologies suivantes :</p>
+
+            <ul class="list-disc pl-8 space-y-2">
+                <li><a href="https://html.spec.whatwg.org/multipage/" class="text-blue-500 hover:underline">HTML 5</a>
+                </li>
+                <li><a href="https://tailwindui.com/" class="text-blue-500 hover:underline">Tailwind CSS</a></li>
+                <li><a href="https://www.jetbrains.com/webstorm/" class="text-blue-500 hover:underline">WebStorm</a>
+                </li>
+                <li><a href="https://www.figma.com/" class="text-blue-500 hover:underline">Figma</a></li>
+            </ul>
+        </div>
+    </div>
 </div>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuIcon = document.getElementById('menu-icon');
+
+    menuToggle.addEventListener('change', () => {
+        if (menuToggle.checked) {
+            // Change to close icon when menu is open
+            menuIcon.src = "imgs/global/close.svg";
+        } else {
+            // Change back to burger icon when menu is closed
+            menuIcon.src = "imgs/global/open.svg";
+        }
+    });
+</script>
 </body>
 </html>
