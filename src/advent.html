@@ -86,8 +86,8 @@
                 src="https://www.youtube.com/embed/Jh6vuVhibDs?autoplay=1"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture " allowfullscreen>
         </iframe>
-
         <button id="closeBtn" class="close-btn">X</button>
+
         <div id="customPopup" style="display: none;">
             <div style="position: fixed; top: 25%; left: 50%; transform: translate(-50%, -50%); width: 800px; background: white; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5); text-align: center; padding: 20px;">
                 <span id="closePopup" style="position: absolute; top: 10px; right: 10px; cursor: pointer; font-size: 18px;">&times;</span>
@@ -95,9 +95,16 @@
                 <img id="image5Bis" src="imgs/advent/quote.png" alt="Image" style="width: 450px; height: 300px; display: block; margin: auto;">
             </div>
         </div>
+        <div id="customPopupBis" style="display: none;">
+            <div style="position: fixed; top: 25%; left: 50%; transform: translate(-50%, -50%); width: 800px; background: white; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5); text-align: center; padding: 20px;">
+                <span id="closePopupBis" style="position: absolute; top: 10px; right: 10px; cursor: pointer; font-size: 18px;">&times;</span>
+                <p>Une petite citation dans l'esprit de noel</p>
+                <img id="image5BisBis" src="imgs/advent/quote.png" alt="Image" style="width: 450px; height: 300px; display: block; margin: auto;">
+            </div>
+        </div>
 
 
-        <div class="grid grid-rows-6  grid-cols-6 gap-2 ml-20">
+        <div class="grid grid-rows-4  grid-cols-6 gap-2 ml-20">
             <div>
                 <button type="submit" id="button1">
                     <img id="image1" src="imgs/advent/cadeau1.png" alt="kado" height="150" width="150"/>
@@ -311,15 +318,15 @@
                 let youtubePlayer = document.getElementById('youtubePlayer');
                 let closeBtn = document.getElementById('closeBtn');
                 closeBtn.style.display = 'block';
-                youtubePlayer.style.display = 'block'; // Show the iframe
+                youtubePlayer.style.display = 'block';
                 img.style.width = '150px';
                 img.style.height = '185px';
                 img.style.display = 'block';
                 img.src = 'imgs/advent/greycadeau.png';
             });
             closeBtn.addEventListener("click", function () {
-                youtubePlayer.style.display = 'none'; // Hide the iframe
-                closeBtn.style.display = 'none'; // Hide the close button
+                youtubePlayer.style.display = 'none';
+                closeBtn.style.display = 'none';
             });
         </script>
 
@@ -347,17 +354,33 @@
         </script>
 
         <script>
-            let btn5 = document.getElementById("button5");
+                document.location.href="https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+                let btn5 = document.getElementById("button5");
+                let popup = document.getElementById("customPopupBis");
+                let closeBtn = document.getElementById("closePopupBis");
 
-            btn5.addEventListener("click", function () {
-                alert('Tout vient à point à qui sait attendre ;)');
+                btn5.addEventListener("click", function () {
+                    // Afficher la popup
+                    popup.style.display = 'block';
 
-                let img = document.getElementById('image5');
-                img.style.width = '150px';
-                img.style.height = '185px';
-                img.style.display = 'block';
-                img.src = 'imgs/advent/greycadeau.png';
-            });
+                    // Modifier l'image si nécessaire
+                    let img = document.getElementById('image5');
+                    img.style.width = '150px';
+                    img.style.height = '185px';
+                    img.src = 'imgs/advent/greycadeau.png';
+                });
+
+// Fermer la popup en cliquant sur la croix
+                closeBtn.addEventListener("click", function () {
+                    popup.style.display = 'none';
+                });
+
+// Fermer la popup si on clique en dehors de la fenêtre
+                popup.addEventListener("click", function (event) {
+                    if (event.target === popup) {
+                        popup.style.display = 'none';
+                    }
+                });
         </script>
 
         <script>
