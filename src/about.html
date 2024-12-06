@@ -7,7 +7,9 @@
     <title>Title</title>
     <link href="./style/output.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 font-mono" style="background-image: url('imgs/podcast/background_bottom.webp'); background-repeat: no-repeat; background-size: cover;" >
+
+
 <div class="relative">
     <input type="checkbox" id="menu-toggle" class="peer absolute -top-10 -left-10 z-50"/>
     <label for="menu-toggle" class="cursor-pointer w-8 h-8 flex items-center justify-center z-50">
@@ -28,38 +30,41 @@
         </div>
     </div>
 
+    <br>
+    <br>
     <!-- Main Content -->
     <div class="pl-8 -top-5 transition-transform duration-300 transform translate-x-0 peer-checked:translate-x-60">
         <!-- About Section -->
         <div>
-            <h1 class="text-3xl underline font-bold mb-4">
+            <h1 class="text-white text-4xl text-center font-mono mt-8 font-bold mb-8">
                 À propos
             </h1>
-            <p class="mb-4">
+            <p  class="font-mono text-center mb-4">
                 Ce site web a été réalisé pour l'association
-                <a href="https://www.raceforwater.org/" target="_blank" class="text-blue-500 hover:underline">
+                <a href="https://www.raceforwater.org/" target="_blank" class="text-white hover:underline">
                     Race for Water
                 </a> dans le cadre de la
-                <a href="https://nuitdelinfo.com" target="_blank" class="text-blue-500 hover:underline">
-                    Nuit de l'info
-                </a>.
+                <a href="https://nuitdelinfo.com" target="_blank" class="text-white hover:underline">
+                    nuit de l'info.
+                </a>
             </p>
         </div>
 
+        <br>
         <!-- Technologies Section -->
         <div>
-            <h1 class="text-3xl underline font-bold mb-4">
+            <h1  class="text-white text-center text-4xl font-mono font-bold mt-8 mb-4">
                 Technologies utilisées
             </h1>
-            <p class="mb-4">Pour ce projet, nous avons utilisé les technologies suivantes :</p>
+            <p class=" font-mono text-center mb-4">Pour ce projet, nous avons utilisé les technologies suivantes :</p>
 
-            <ul class="list-disc pl-8 space-y-2">
-                <li><a href="https://html.spec.whatwg.org/multipage/" class="text-blue-500 hover:underline">HTML 5</a>
-                </li>
-                <li><a href="https://tailwindui.com/" class="text-blue-500 hover:underline">Tailwind CSS</a></li>
-                <li><a href="https://www.jetbrains.com/webstorm/" class="text-blue-500 hover:underline">WebStorm</a>
-                </li>
-                <li><a href="https://www.figma.com/" class="text-blue-500 hover:underline">Figma</a></li>
+            <ul class="list-disc pl-8 text-center space-y-2 font-mono">
+                <p><a href="https://html.spec.whatwg.org/multipage/" class="text-white hover:underline">HTML 5</a>
+                </p>
+                <p><a href="https://tailwindui.com/" class="text-white hover:underline">Tailwind CSS</a></p>
+                <p><a href="https://www.jetbrains.com/webstorm/" class="text-white hover:underline">WebStorm</a>
+                </p>
+                <p><a href="https://www.figma.com/" class="text-white hover:underline">Figma</a></p>
             </ul>
         </div>
     </div>
